@@ -9,8 +9,6 @@ import javax.persistence.*;
  */
 @Getter
 @Setter
-@EqualsAndHashCode(exclude = "userCredentials")
-@ToString(exclude = "userCredentials")
 @Entity
 @Table(name = "USER")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -26,8 +24,4 @@ public abstract class UserEntity {
 
     @Column(name = "ADDITIONAL")
     private String additional;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_CREDENTIALS_ID", nullable = false)
-    private UserCredentialsEntity userCredentials;
 }

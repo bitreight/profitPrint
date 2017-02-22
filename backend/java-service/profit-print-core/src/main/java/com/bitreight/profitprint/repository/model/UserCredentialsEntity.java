@@ -17,7 +17,6 @@ import javax.persistence.*;
 public class UserCredentialsEntity {
 
     @Id
-    @NonNull
     @Column(name = "ID")
     @GeneratedValue
     private Long id;
@@ -35,8 +34,8 @@ public class UserCredentialsEntity {
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne(mappedBy = "userCredentials", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "FK_USER_ID", unique = true)
     private UserEntity user;
 
     public enum UserRole {
