@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>profit-print-java-service</artifactId>
+        <artifactId>profit-print-parent</artifactId>
         <groupId>com.bitreight</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>profit-print-core</artifactId>
+    <artifactId>print-center-service</artifactId>
     <packaging>jar</packaging>
 
-    <name>profit-print-core</name>
+    <name>print-center-service</name>
 
 </project>
