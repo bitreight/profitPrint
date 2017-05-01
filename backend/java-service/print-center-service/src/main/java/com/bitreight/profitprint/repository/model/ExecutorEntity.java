@@ -8,8 +8,7 @@ import javax.persistence.Table;
 /**
  * @author bitreight
  */
-@Getter
-@Setter
+@Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Entity

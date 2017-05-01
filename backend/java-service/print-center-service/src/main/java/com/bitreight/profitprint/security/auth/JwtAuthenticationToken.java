@@ -1,17 +1,16 @@
 package com.bitreight.profitprint.security.auth;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.security.auth.Subject;
 
 /**
- * Created by bitreight on 4/30/17.
+ * @author bitreight
  */
 public class JwtAuthenticationToken extends AbstractAuthenticationToken {
 
     private String jwtToken;
-    private UserDetails userDetails;
+    private AuthenticatedUser authenticatedUser;
 
     public JwtAuthenticationToken(String jwtToken) {
         super(null);
@@ -19,10 +18,10 @@ public class JwtAuthenticationToken extends AbstractAuthenticationToken {
         setAuthenticated(false);
     }
 
-    public JwtAuthenticationToken(String jwtToken, UserDetails userDetails) {
-        super(userDetails.getAuthorities());
+    public JwtAuthenticationToken(String jwtToken, AuthenticatedUser authenticatedUser) {
+        super(authenticatedUser.getAuthorities());
         this.jwtToken = jwtToken;
-        this.userDetails = userDetails;
+        this.authenticatedUser = authenticatedUser;
         setAuthenticated(true);
     }
 
@@ -33,7 +32,7 @@ public class JwtAuthenticationToken extends AbstractAuthenticationToken {
 
     @Override
     public Object getPrincipal() {
-        return userDetails;
+        return authenticatedUser;
     }
 
     @Override

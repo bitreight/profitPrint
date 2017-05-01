@@ -14,7 +14,6 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 
 import javax.servlet.ServletException;
@@ -23,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by bitreight on 4/28/17.
+ * @author bitreight
  */
 public class AjaxLoginProcessingFilter extends AbstractAuthenticationProcessingFilter {
 
@@ -37,8 +36,8 @@ public class AjaxLoginProcessingFilter extends AbstractAuthenticationProcessingF
         super(processingUrl);
 
         this.setAuthenticationSuccessHandler((rq, rs, auth) -> {
-            if(auth.getPrincipal() instanceof UserDetails) {
-                Pair<String, String> token = jwtTokenService.createToken((UserDetails) auth.getPrincipal());
+            if(auth.getPrincipal() instanceof AuthenticatedUser) {
+                Pair<String, String> token = jwtTokenService.createToken((AuthenticatedUser) auth.getPrincipal());
                 rs.setStatus(HttpStatus.OK.value());
                 rs.setContentType(MediaType.APPLICATION_JSON_VALUE);
                 mapper.writeValue(rs.getWriter(), token);
@@ -63,7 +62,6 @@ public class AjaxLoginProcessingFilter extends AbstractAuthenticationProcessingF
         UsernamePasswordAuthenticationToken token =
                 new UsernamePasswordAuthenticationToken(loginJson.getLogin(), loginJson.getPassword());
 
-//        tmp in memory auth
         return this.getAuthenticationManager().authenticate(token);
     }
 

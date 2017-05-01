@@ -24,10 +24,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import javax.servlet.Filter;
 
 /**
- * Created by bitreight on 4/27/17.
+ * @author bitreight
  */
-//TODO: configure JWT auth to secured endpoints
-//TODO: refactor bean definitions (from @Component to @Bean)
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -36,6 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final static String LOGIN_END_POINT = "/auth/login";
     private final static String API_END_POINTS = "/api/**";
+
+    private final static String BEARER_HEADER_VALUE = "Bearer realm=\"users\"";
 
     @Autowired
     private RepositoryUserDetailsService repositoryUserDetailsService;
@@ -58,7 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public DaoAuthenticationProvider ajaxAuthenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(repositoryUserDetailsService);
-        provider.setPasswordEncoder(passwordEncoder());
+//        provider.setPasswordEncoder(passwordEncoder());
         return provider;
     }
 
@@ -79,9 +79,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .inMemoryAuthentication().withUser("user").password("pass").roles("ADMIN");
-//                .authenticationProvider(ajaxAuthenticationProvider())
-//                .authenticationProvider(jwtAuthenticationProvider);
+//                .inMemoryAuthentication().withUser("user").password("pass").roles("ADMIN");
+                .authenticationProvider(ajaxAuthenticationProvider())
+                .authenticationProvider(jwtAuthenticationProvider);
     }
 
     @Override
@@ -89,13 +89,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .csrf().disable()
             .exceptionHandling()
-            .authenticationEntryPoint(new Http401AuthenticationEntryPoint("Bearer realm=\"users\""))
+            .authenticationEntryPoint(new Http401AuthenticationEntryPoint(BEARER_HEADER_VALUE))
         .and()
             .sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
             .authorizeRequests()
-            .antMatchers("/auth/login").permitAll()
+            .antMatchers(LOGIN_END_POINT).permitAll()
             .anyRequest().authenticated()
         .and()
             .addFilterBefore(ajaxLoginProcessingFilter(), UsernamePasswordAuthenticationFilter.class)

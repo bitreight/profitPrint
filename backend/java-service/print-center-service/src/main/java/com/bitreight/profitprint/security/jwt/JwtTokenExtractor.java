@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 /**
- * Created by bitreight on 4/30/17.
+ * @author bitreight
  */
 @Component
 public class JwtTokenExtractor {

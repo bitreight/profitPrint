@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by bitreight on 4/29/17.
+ * @author bitreight
  */
 @Configuration
 @ConfigurationProperties(prefix = "security.jwt")

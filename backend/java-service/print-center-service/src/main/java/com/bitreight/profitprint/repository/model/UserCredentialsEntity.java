@@ -9,7 +9,6 @@ import javax.persistence.*;
  */
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 @EqualsAndHashCode(exclude = "user")
 @ToString(exclude = "user")
 @Entity
@@ -34,7 +33,7 @@ public class UserCredentialsEntity {
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "FK_USER_ID", unique = true)
     private UserEntity user;
 

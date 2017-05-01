@@ -7,8 +7,7 @@ import javax.persistence.*;
 /**
  * @author bitreight
  */
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "USER")
 @Inheritance(strategy = InheritanceType.JOINED)

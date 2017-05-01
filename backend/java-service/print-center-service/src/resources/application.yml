@@ -16,4 +16,4 @@ security:
   enabled: true
   jwt:
     signingKey: profitPrintSecret
-    expirationTime: 5
+    expirationTime: 30

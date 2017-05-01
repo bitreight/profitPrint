@@ -1,7 +1,6 @@
 package com.bitreight.profitprint.security.auth;
 
 import com.bitreight.profitprint.security.jwt.JwtTokenExtractor;
-import com.bitreight.profitprint.security.jwt.JwtTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.Authentication;
@@ -16,7 +15,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 /**
- * Created by bitreight on 4/28/17.
+ * @author bitreight
  */
 public class JwtTokenAuthenticationProcessingFilter extends AbstractAuthenticationProcessingFilter {
 
@@ -25,6 +24,7 @@ public class JwtTokenAuthenticationProcessingFilter extends AbstractAuthenticati
 
     public JwtTokenAuthenticationProcessingFilter(String processingUrl) {
         super(processingUrl);
+        super.setAuthenticationSuccessHandler((rq, rs, a) -> {});
     }
 
     @Override
