@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 /**
  * @author bitreight
  */
-@Component
 public class JwtAuthenticationProvider implements AuthenticationProvider {
 
     @Autowired
