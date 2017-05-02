@@ -31,7 +31,7 @@ import javax.servlet.Filter;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@ConditionalOnProperty(value = "security.enabled")
+@ConditionalOnProperty(value = "web.security.enabled")
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final static String LOGIN_END_POINT = "/auth/login";

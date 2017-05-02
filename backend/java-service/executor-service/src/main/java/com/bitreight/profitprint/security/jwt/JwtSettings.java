@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @author bitreight
  */
 @Configuration
-@ConfigurationProperties(prefix = "security.jwt")
+@ConfigurationProperties(prefix = "web.security.jwt")
 @Data
 public class JwtSettings {
     private String signingKey;

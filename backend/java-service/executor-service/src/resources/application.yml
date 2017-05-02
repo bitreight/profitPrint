@@ -13,7 +13,11 @@ spring:
     password: profit-pass
 
 security:
-  enabled: true
-  jwt:
-    signingKey: profitPrintSecret
-    expirationTime: 30
+  ignored: /**
+
+web:
+  security:
+    enabled: true
+    jwt:
+      signingKey: profitPrintSecret
+      expirationTime: 30
