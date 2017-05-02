@@ -16,7 +16,6 @@ import java.util.stream.Stream;
 /**
  * @author bitreight
  */
-@Service
 public class RepositoryUserDetailsService implements UserDetailsService {
 
     @Autowired
