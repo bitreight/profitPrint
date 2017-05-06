@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Data
 @Entity
-@Table(name = "USER")
+@Table(name = "User")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class UserEntity {
 
@@ -18,9 +18,9 @@ public abstract class UserEntity {
     @GeneratedValue
     private Long id;
 
-    @Column(name = "PHONE")
+    @Column(name = "Phone")
     private String phone;
 
-    @Column(name = "ADDITIONAL")
-    private String additional;
+    @Column(name = "Email")
+    private String email;
 }

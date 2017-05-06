@@ -13,12 +13,12 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Entity
-@Table(name = "CUSTOMER")
+@Table(name = "Customer")
 public class CustomerEntity extends UserEntity {
 
-    @Column(name = "FNAME")
-    private String fname;
+    @Column(name = "FirstName")
+    private String firstName;
 
-    @Column(name = "LNAME")
-    private String lname;
+    @Column(name = "LastName")
+    private String lastName;
 }

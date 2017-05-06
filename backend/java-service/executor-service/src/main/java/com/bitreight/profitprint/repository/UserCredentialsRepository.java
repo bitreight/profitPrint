@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * @author bitreight
  */
 @Repository
-public interface UserCredentialsRepository extends CrudRepository<UserCredentialsEntity, Integer> {
+public interface UserCredentialsRepository extends CrudRepository<UserCredentialsEntity, Long> {
 
     UserCredentialsEntity findOneByLogin(String login);
 }
