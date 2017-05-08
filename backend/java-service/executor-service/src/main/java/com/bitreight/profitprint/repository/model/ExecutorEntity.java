@@ -16,7 +16,7 @@ import java.sql.Time;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Entity
-@Table(name = "ExecutorToRegister")
+@Table(name = "Executor")
 public class ExecutorEntity extends UserEntity {
 
     @Column(name = "Address", nullable = false)

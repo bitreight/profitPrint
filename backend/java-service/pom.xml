@@ -32,6 +32,7 @@
         <apache.commons.version>3.0</apache.commons.version>
         <h2.versison>1.4.195</h2.versison>
         <mysql.connector.version>6.0.6</mysql.connector.version>
+        <mapstruct.version>1.1.0.Final</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -72,6 +73,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache.commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

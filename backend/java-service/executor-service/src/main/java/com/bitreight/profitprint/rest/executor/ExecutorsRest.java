@@ -22,6 +22,6 @@ public class ExecutorsRest {
 
     @PostMapping("/api/executors")
     public void registerExecutor(ExecutorToRegister executor) {
-
+        executorsRegisterService.registerExecutor(executor);
     }
 }

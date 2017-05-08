@@ -6,6 +6,7 @@ import com.bitreight.profitprint.rest.model.ExecutorToRegister;
 import com.bitreight.profitprint.repository.UserRepository;
 import com.bitreight.profitprint.repository.model.ExecutorEntity;
 import com.bitreight.profitprint.service.ExecutorsRegisterService;
+import com.bitreight.profitprint.service.mapper.ExecutorMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,7 @@ public class ExecutorsRegisterServiceImpl implements ExecutorsRegisterService {
 
     @Override
     public String registerExecutor(ExecutorToRegister executor) {
-        return null;
+        ExecutorEntity executorEntity = ExecutorMapper.mapper.toExecutorEntity(executor);
+        return "";
     }
 }
