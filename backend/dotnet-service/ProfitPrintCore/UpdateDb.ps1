@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "Server=localhost;User Id=profit-print;Password=profit-pass;Database=profit_print_db" "Pomelo.EntityFrameworkCore.MySql" --force --output-dir Models
