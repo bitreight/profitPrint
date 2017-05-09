@@ -16,12 +16,12 @@ public class ExecutorsRest {
     @Autowired
     private ExecutorsRegisterService executorsRegisterService;
 
-    @PostMapping("/api/executors/regkeys")
+    @PostMapping("/api/executor/regkey")
     public String createNewExecutor() {
         return executorsRegisterService.createExecutorRegisterKey();
     }
 
-    @PostMapping("/api/executors")
+    @PostMapping("/api/executor")
     public Executor registerExecutor(@RequestBody Executor executor) {
         return executorsRegisterService.registerExecutor(executor);
     }
