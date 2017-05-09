@@ -22,6 +22,12 @@ public class ExecutorEntity extends UserEntity {
     @Column(name = "Address", nullable = false)
     private String address;
 
+    @Column(name = "Latitude", nullable = false)
+    private Double latitude;
+
+    @Column(name = "Longtitude", nullable = false)
+    private Double longtitude;
+
     @Column(name = "OpenTime", nullable = false)
     private Time openTime;
 
