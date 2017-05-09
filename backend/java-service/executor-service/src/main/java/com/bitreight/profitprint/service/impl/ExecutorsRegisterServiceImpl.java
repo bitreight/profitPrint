@@ -2,7 +2,7 @@ package com.bitreight.profitprint.service.impl;
 
 import com.bitreight.profitprint.repository.RegisterKeyRepository;
 import com.bitreight.profitprint.repository.model.RegisterKeyEntity;
-import com.bitreight.profitprint.rest.model.ExecutorToRegister;
+import com.bitreight.profitprint.rest.model.Executor;
 import com.bitreight.profitprint.repository.UserRepository;
 import com.bitreight.profitprint.repository.model.ExecutorEntity;
 import com.bitreight.profitprint.service.ExecutorsRegisterService;
@@ -24,6 +24,9 @@ public class ExecutorsRegisterServiceImpl implements ExecutorsRegisterService {
     @Autowired
     private UserRepository<ExecutorEntity> executorRepository;
 
+    @Autowired
+    private ExecutorMapper executorMapper;
+
     @Override
     public String createExecutorRegisterKey() {
         RegisterKeyEntity regKey = new RegisterKeyEntity();
@@ -32,8 +35,9 @@ public class ExecutorsRegisterServiceImpl implements ExecutorsRegisterService {
     }
 
     @Override
-    public String registerExecutor(ExecutorToRegister executor) {
-        ExecutorEntity executorEntity = ExecutorMapper.mapper.toExecutorEntity(executor);
-        return "";
+    public Executor registerExecutor(Executor executor) {
+        ExecutorEntity executorEntity = executorMapper.toExecutorEntity(executor);
+        Executor executor1 = executorMapper.toExecutor(executorEntity);
+        return executor1;
     }
 }
