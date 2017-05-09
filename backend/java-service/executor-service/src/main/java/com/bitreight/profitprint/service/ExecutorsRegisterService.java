@@ -1,6 +1,6 @@
 package com.bitreight.profitprint.service;
 
-import com.bitreight.profitprint.rest.model.ExecutorToRegister;
+import com.bitreight.profitprint.rest.model.Executor;
 
 /**
  * @author bitreight
@@ -8,6 +8,5 @@ import com.bitreight.profitprint.rest.model.ExecutorToRegister;
 public interface ExecutorsRegisterService {
 
     String createExecutorRegisterKey();
-
-    String registerExecutor(ExecutorToRegister executor);
+    Executor registerExecutor(Executor executor);
 }

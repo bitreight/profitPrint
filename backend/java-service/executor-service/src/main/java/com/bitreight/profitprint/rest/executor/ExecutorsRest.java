@@ -1,9 +1,10 @@
 package com.bitreight.profitprint.rest.executor;
 
-import com.bitreight.profitprint.rest.model.ExecutorToRegister;
+import com.bitreight.profitprint.rest.model.Executor;
 import com.bitreight.profitprint.service.ExecutorsRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,7 +22,7 @@ public class ExecutorsRest {
     }
 
     @PostMapping("/api/executors")
-    public void registerExecutor(ExecutorToRegister executor) {
-
+    public Executor registerExecutor(@RequestBody Executor executor) {
+        return executorsRegisterService.registerExecutor(executor);
     }
 }
