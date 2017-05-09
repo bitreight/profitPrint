@@ -32,6 +32,10 @@ public class Executor {
 
     private String address;
 
+    private Double latitude;
+
+    private Double longtitude;
+
     @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
