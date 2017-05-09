@@ -32,6 +32,8 @@
         <apache.commons.version>3.0</apache.commons.version>
         <h2.versison>1.4.195</h2.versison>
         <mysql.connector.version>6.0.6</mysql.connector.version>
+        <mapstruct.version>1.1.0.Final</mapstruct.version>
+        <jackson.datatype.version>2.8.8</jackson.datatype.version>
     </properties>
 
     <dependencyManagement>
@@ -67,11 +69,28 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache.commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.datatype.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
