@@ -5,7 +5,7 @@ import com.bitreight.profitprint.rest.model.Executor;
 /**
  * @author bitreight
  */
-public interface ExecutorsRegisterService {
+public interface ExecutorRegisterService {
 
     String createExecutorRegisterKey();
     Executor registerExecutor(Executor executor);
