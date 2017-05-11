@@ -26,6 +26,8 @@ public class Executor {
     @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
 
+    private String title;
+
     private String phone;
 
     private String email;

@@ -1,0 +1,8 @@
+web:
+  security:
+    enabled: false
+
+spring:
+  jpa:
+    show-sql: true
+

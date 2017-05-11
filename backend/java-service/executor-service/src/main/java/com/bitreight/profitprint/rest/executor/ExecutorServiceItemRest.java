@@ -24,13 +24,14 @@ public class ExecutorServiceItemRest {
     }
 
     @GetMapping("/{serviceId}")
-    public ExecutorServiceItem getExecutorServiceItemById(@PathVariable("serviceId") Long serviceItemId) {
-        return null;
+    public ExecutorServiceItem getExecutorServiceItemById(@PathVariable("executorId") Long executorId,
+                                                          @PathVariable("serviceId") Long serviceItemId) {
+        return executorServiceItemService.getExecutorServiceItemById(executorId, serviceItemId);
     }
 
     @GetMapping
     public List<ExecutorServiceItem> getAllExecutorServiceItems(@PathVariable("executorId") Long executorId) {
-        return null;
+        return executorServiceItemService.getAllExecutorServiceItems(executorId);
     }
 
     //TODO: update, delete endpoints

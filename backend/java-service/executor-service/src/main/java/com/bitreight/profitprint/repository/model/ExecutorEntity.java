@@ -19,6 +19,9 @@ import java.sql.Time;
 @Table(name = "Executor")
 public class ExecutorEntity extends UserEntity {
 
+    @Column(name = "Title", nullable = false)
+    private String title;
+
     @Column(name = "Address", nullable = false)
     private String address;
 

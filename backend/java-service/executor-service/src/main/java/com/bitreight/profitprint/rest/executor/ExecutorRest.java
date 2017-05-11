@@ -1,12 +1,11 @@
 package com.bitreight.profitprint.rest.executor;
 
 import com.bitreight.profitprint.rest.model.Executor;
-import com.bitreight.profitprint.service.ExecutorRegisterService;
+import com.bitreight.profitprint.service.ExecutorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author bitreight
@@ -16,15 +15,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExecutorRest {
 
     @Autowired
-    private ExecutorRegisterService executorRegisterService;
+    private ExecutorService executorService;
 
     @PostMapping("/regkey")
     public String createExecutorRegisterKey() {
-        return executorRegisterService.createExecutorRegisterKey();
+        return executorService.createExecutorRegisterKey();
     }
 
     @PostMapping
     public Executor registerExecutor(@RequestBody Executor executor) {
-        return executorRegisterService.registerExecutor(executor);
+        return executorService.registerExecutor(executor);
+    }
+
+    @GetMapping("/{executorId}")
+    public Executor getExecutorById(@PathVariable("executorId") Long executorId) {
+        return executorService.getExecutorById(executorId);
+    }
+
+    @GetMapping
+    public List<Executor> getAllExecutors() {
+        return executorService.getAllExecutors();
     }
 }

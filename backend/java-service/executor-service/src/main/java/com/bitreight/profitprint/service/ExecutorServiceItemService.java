@@ -10,6 +10,6 @@ import java.util.List;
 public interface ExecutorServiceItemService {
 
     ExecutorServiceItem createExecutorServiceItem(Long executorId, ExecutorServiceItem serviceItem);
-    ExecutorServiceItem getExecutorServiceItemById(Long serviceItemId);
+    ExecutorServiceItem getExecutorServiceItemById(Long executorId, Long serviceItemId);
     List<ExecutorServiceItem> getAllExecutorServiceItems(Long executorId);
 }

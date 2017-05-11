@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 public class ExecutorServiceItemEntity {
 
     @Id
+    @Column(name = "ID")
     @GeneratedValue
     private Long id;
 
