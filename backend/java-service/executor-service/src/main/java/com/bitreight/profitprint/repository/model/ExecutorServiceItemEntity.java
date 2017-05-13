@@ -1,6 +1,8 @@
 package com.bitreight.profitprint.repository.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -9,6 +11,8 @@ import java.math.BigDecimal;
  * @author bitreight
  */
 @Data
+@EqualsAndHashCode(exclude = "executor")
+@ToString(exclude = "executor")
 @Entity
 @Table(name = "ExecutorServiceItem")
 public class ExecutorServiceItemEntity {
