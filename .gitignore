@@ -1,7 +1,19 @@
+# IDEA
 .idea/
+*.iml
+
+# back-end
 .vs/
 target/
-*.iml
 /backend/dotnet-service/ProfitPrintCore/.vs
 /backend/dotnet-service/ProfitPrintCore/bin
 /backend/dotnet-service/ProfitPrintCore/obj
+
+# front-end
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.tmp/
+dist/
+
