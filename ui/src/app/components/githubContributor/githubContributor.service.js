@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ui')
+    .module('profitPrint')
     .factory('githubContributor', githubContributor);
 
   /** @ngInject */

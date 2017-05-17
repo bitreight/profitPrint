@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ui')
+    .module('profitPrint')
     .config(routeConfig);
 
   function routeConfig($routeProvider) {
@@ -10,7 +10,7 @@
       .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'mainCtrl'
       })
       .otherwise({
         redirectTo: '/'
