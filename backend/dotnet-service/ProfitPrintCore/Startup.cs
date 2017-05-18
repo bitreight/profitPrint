@@ -6,7 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using ProfitPrintCore.Interfaces;
 using ProfitPrintCore.Models;
+using ProfitPrintCore.Repositories;
 
 namespace ProfitPrintCore
 {
@@ -27,6 +29,9 @@ namespace ProfitPrintCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<profit_print_dbContext>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IExecutorRepository, ExecutorRepository>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddMvc();
         }
 

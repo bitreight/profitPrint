@@ -7,14 +7,20 @@ namespace ProfitPrintCore.Models
     public partial class profit_print_dbContext : DbContext
     {
         public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<Document> Document { get; set; }
         public virtual DbSet<Executor> Executor { get; set; }
+        public virtual DbSet<Executorserviceitem> Executorserviceitem { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Registerkey> Registerkey { get; set; }
         public virtual DbSet<SchemaVersion> SchemaVersion { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Usercredentials> Usercredentials { get; set; }
 
+        // Unable to generate entity type for table 'orderdocument'. Please see the warning messages.
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
             optionsBuilder.UseMySql(@"Server=localhost;User Id=profit-print;Password=profit-pass;Database=profit_print_db");
         }
 
@@ -39,6 +45,19 @@ namespace ProfitPrintCore.Models
                     .HasConstraintName("FKgws7qc0vrq8ohllfbrtfa6co9");
             });
 
+            modelBuilder.Entity<Document>(entity =>
+            {
+                entity.ToTable("document");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("ID")
+                    .HasColumnType("bigint(20)");
+
+                entity.Property(e => e.Link)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+            });
+
             modelBuilder.Entity<Executor>(entity =>
             {
                 entity.ToTable("executor");
@@ -55,6 +74,10 @@ namespace ProfitPrintCore.Models
 
                 entity.Property(e => e.OpenTime).HasColumnType("time");
 
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+
                 entity.Property(e => e.WebSite).HasColumnType("varchar(255)");
 
                 entity.HasOne(d => d.IdNavigation)
@@ -62,6 +85,96 @@ namespace ProfitPrintCore.Models
                     .HasForeignKey<Executor>(d => d.Id)
                     .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FKkf2n18qxbyqiexx649hbm548m");
+            });
+
+            modelBuilder.Entity<Executorserviceitem>(entity =>
+            {
+                entity.ToTable("executorserviceitem");
+
+                entity.HasIndex(e => e.ExecutorId)
+                    .HasName("FKjvny1l2214ii826m7osl1hdxj");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("ID")
+                    .HasColumnType("bigint(20)");
+
+                entity.Property(e => e.Description)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+
+                entity.Property(e => e.ExecutorId).HasColumnType("bigint(20)");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+
+                entity.Property(e => e.Price).HasColumnType("decimal(19,2)");
+
+                entity.HasOne(d => d.Executor)
+                    .WithMany(p => p.Executorserviceitem)
+                    .HasForeignKey(d => d.ExecutorId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FKjvny1l2214ii826m7osl1hdxj");
+            });
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.ToTable("order");
+
+                entity.HasIndex(e => e.CustomerId)
+                    .HasName("FKtjvhgf7nicc326156mde5rg6o");
+
+                entity.HasIndex(e => e.ExecutorId)
+                    .HasName("FKcrx82p7stqpinf18fiwfwofp3");
+
+                entity.HasIndex(e => e.ExecutorServiceItemId)
+                    .HasName("FKrtmkng3b8uxs7ypfpi6l0ntil");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("ID")
+                    .HasColumnType("bigint(20)");
+
+                entity.Property(e => e.Count).HasColumnType("int(11)");
+
+                entity.Property(e => e.CustomerComment).HasColumnType("varchar(255)");
+
+                entity.Property(e => e.CustomerId).HasColumnType("bigint(20)");
+
+                entity.Property(e => e.Date).HasColumnType("datetime");
+
+                entity.Property(e => e.Description)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+
+                entity.Property(e => e.ExecutorId).HasColumnType("bigint(20)");
+
+                entity.Property(e => e.ExecutorServiceItemId).HasColumnType("bigint(20)");
+
+                entity.Property(e => e.Priority)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+
+                entity.Property(e => e.State)
+                    .IsRequired()
+                    .HasColumnType("varchar(255)");
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany(p => p.Order)
+                    .HasForeignKey(d => d.CustomerId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FKtjvhgf7nicc326156mde5rg6o");
+
+                entity.HasOne(d => d.Executor)
+                    .WithMany(p => p.Order)
+                    .HasForeignKey(d => d.ExecutorId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FKcrx82p7stqpinf18fiwfwofp3");
+
+                entity.HasOne(d => d.ExecutorServiceItem)
+                    .WithMany(p => p.Order)
+                    .HasForeignKey(d => d.ExecutorServiceItemId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .HasConstraintName("FKrtmkng3b8uxs7ypfpi6l0ntil");
             });
 
             modelBuilder.Entity<Registerkey>(entity =>

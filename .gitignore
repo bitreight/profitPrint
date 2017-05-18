@@ -5,9 +5,9 @@
 # back-end
 .vs/
 target/
-/backend/dotnet-service/ProfitPrintCore/.vs
-/backend/dotnet-service/ProfitPrintCore/bin
-/backend/dotnet-service/ProfitPrintCore/obj
+/backend/dotnet-service/ProfitPrintCore/.vs/
+/backend/dotnet-service/ProfitPrintCore/bin/
+/backend/dotnet-service/ProfitPrintCore/obj/
 
 # front-end
 node_modules/
@@ -17,3 +17,4 @@ coverage/
 .tmp/
 dist/
 
+/client_secret_153392051840-pkjrchj02fi1on7tud5djp75fuodm60q.apps.googleusercontent.com.json

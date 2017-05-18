@@ -1,9 +1,0 @@
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\bin\Debug\netcoreapp1.1\ProfitPrintCore.deps.json
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\bin\Debug\netcoreapp1.1\ProfitPrintCore.runtimeconfig.json
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\bin\Debug\netcoreapp1.1\ProfitPrintCore.runtimeconfig.dev.json
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\bin\Debug\netcoreapp1.1\ProfitPrintCore.dll
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\bin\Debug\netcoreapp1.1\ProfitPrintCore.pdb
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\obj\Debug\netcoreapp1.1\ProfitPrintCore.csprojResolveAssemblyReference.cache
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\obj\Debug\netcoreapp1.1\ProfitPrintCore.AssemblyInfo.cs
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\obj\Debug\netcoreapp1.1\ProfitPrintCore.dll
-H:\Projects\profitPrint\backend\dotnet-service\ProfitPrintCore\obj\Debug\netcoreapp1.1\ProfitPrintCore.pdb

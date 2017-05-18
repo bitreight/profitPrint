@@ -43,14 +43,14 @@ namespace ProfitPrintCore.Controllers
                 _repository.Create(RegisterModelToUserModelConverter.Convert(registerModel));
 
                 return Ok();
-            }
+            }   
             catch (Exception exception)
             {
                 return BadRequest(exception.Message);
             }
         }
 
-        // DELETE api/values/5
+        //DELETE api/values/5
         //[HttpDelete("{id}")]
         //public void Delete(long id)
         //{

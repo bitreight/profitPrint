@@ -1,4 +1,5 @@
-﻿using ProfitPrintCore.Models;
+﻿using System.Collections.Generic;
+using ProfitPrintCore.Models;
 
 namespace ProfitPrintCore.Interfaces
 {
@@ -7,5 +8,6 @@ namespace ProfitPrintCore.Interfaces
         void Create(User user);
         void Delete(User user);
         User Read(long id);
+        List<User> Read();
     }
 }

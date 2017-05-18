@@ -5,35 +5,35 @@ using ProfitPrintCore.Models;
 
 namespace ProfitPrintCore.Repositories
 {
-    public class UserRepository: IUserRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly profit_print_dbContext _context;
 
-        public UserRepository()
+        public CustomerRepository()
         {
             _context = new profit_print_dbContext();
         }
 
-        public void Create(User user)
+        public void Create(Customer customer)
         {
-            _context.User.Add(user);
+            _context.Customer.Add(customer);
             _context.SaveChanges(true);
         }
 
-        public void Delete(User user)
+        public void Delete(Customer customer)
         {
-            _context.User.Remove(user);
+            _context.Customer.Remove(customer);
             _context.SaveChanges(true);
         }
 
-        public User Read(long id)
+        public Customer Read(long id)
         {
-            return _context.User.FirstOrDefault(_ => _.Id == id);
+            return _context.Customer.FirstOrDefault(_ => _.Id == id);
         }
 
-        public List<User> Read()
+        public List<Customer> Read()
         {
-            return _context.User.ToList();
+            return _context.Customer.ToList();
         }
     }
 }
