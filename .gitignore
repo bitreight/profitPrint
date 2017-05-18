@@ -5,7 +5,9 @@
 # back-end
 .vs/
 target/
-
+/backend/dotnet-service/ProfitPrintCore/.vs/
+/backend/dotnet-service/ProfitPrintCore/bin/
+/backend/dotnet-service/ProfitPrintCore/obj/
 
 # front-end
 node_modules/
