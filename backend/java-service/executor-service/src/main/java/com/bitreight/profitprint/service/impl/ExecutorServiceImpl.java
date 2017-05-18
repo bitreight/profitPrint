@@ -2,30 +2,33 @@ package com.bitreight.profitprint.service.impl;
 
 import com.bitreight.profitprint.repository.RegisterKeyRepository;
 import com.bitreight.profitprint.repository.UserCredentialsRepository;
+import com.bitreight.profitprint.repository.ExecutorRepository;
+import com.bitreight.profitprint.repository.model.ExecutorEntity;
 import com.bitreight.profitprint.repository.model.RegisterKeyEntity;
 import com.bitreight.profitprint.repository.model.UserCredentialsEntity;
 import com.bitreight.profitprint.repository.model.UserRole;
 import com.bitreight.profitprint.rest.model.Executor;
-import com.bitreight.profitprint.repository.UserRepository;
-import com.bitreight.profitprint.repository.model.ExecutorEntity;
-import com.bitreight.profitprint.service.ExecutorsRegisterService;
+import com.bitreight.profitprint.service.ExecutorService;
 import com.bitreight.profitprint.service.mapper.ExecutorMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 
 /**
  * @author bitreight
  */
 @Service
-public class ExecutorsRegisterServiceImpl implements ExecutorsRegisterService {
+public class ExecutorServiceImpl implements ExecutorService {
 
     @Autowired
     private RegisterKeyRepository registerKeyRepository;
     @Autowired
     private UserCredentialsRepository userCredentialsRepository;
+    @Autowired
+    private ExecutorRepository executorRepository;
     @Autowired
     private ExecutorMapper executorMapper;
 
@@ -58,5 +61,25 @@ public class ExecutorsRegisterServiceImpl implements ExecutorsRegisterService {
         registerKeyRepository.save(registerKey);
 
         return executorMapper.toExecutor(createdExecutor);
+    }
+
+    @Override
+    public Executor getExecutorById(Long executorId) {
+        ExecutorEntity executor = executorRepository.findOne(executorId);
+        if (executor == null) {
+            throw new RuntimeException("Executor not found");
+        }
+
+        return executorMapper.toExecutor(executor);
+    }
+
+    @Override
+    public List<Executor> getAllExecutors() {
+        List<ExecutorEntity> executors = (List<ExecutorEntity>) executorRepository.findAll();
+        if (executors.isEmpty()) {
+            executors = Collections.emptyList();
+        }
+
+        return executorMapper.toExecutors(executors);
     }
 }

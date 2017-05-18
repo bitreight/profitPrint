@@ -1,6 +1,6 @@
 package com.bitreight.profitprint.repository;
 
-import com.bitreight.profitprint.repository.model.UserEntity;
+import com.bitreight.profitprint.repository.model.ExecutorServiceItemEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @author bitreight
  */
 @Repository
-public interface UserRepository<T extends UserEntity> extends CrudRepository<T, Long> {
+public interface ExecutorServiceItemRepository extends CrudRepository<ExecutorServiceItemEntity, Long> {
 }

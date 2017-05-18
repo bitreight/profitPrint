@@ -5,6 +5,8 @@ import com.bitreight.profitprint.rest.model.Executor;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+import java.util.List;
+
 /**
  * @author bitreight
  */
@@ -15,4 +17,5 @@ public interface ExecutorMapper {
 
     ExecutorEntity toExecutorEntity(Executor executor);
     Executor toExecutor(ExecutorEntity executorEntity);
+    List<Executor> toExecutors(List<ExecutorEntity> executorEntities);
 }

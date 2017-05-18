@@ -26,11 +26,17 @@ public class Executor {
     @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
 
+    private String title;
+
     private String phone;
 
     private String email;
 
     private String address;
+
+    private Double latitude;
+
+    private Double longtitude;
 
     @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = LocalTimeDeserializer.class)
