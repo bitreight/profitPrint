@@ -15,6 +15,7 @@ namespace ProfitPrintCore.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
             optionsBuilder.UseMySql(@"Server=localhost;User Id=profit-print;Password=profit-pass;Database=profit_print_db");
         }
 
