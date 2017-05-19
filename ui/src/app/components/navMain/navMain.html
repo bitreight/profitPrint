@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a href="../" class="navbar-brand">Profit Print</a>
+      <a class="navbar-brand">Profit Print</a>
       <button type="button" class="navbar-toggle"
               ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -10,12 +10,12 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-    <div class="navbar-collapse collapse" uib-collapse="$ctrl.isCollapsed">
+    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#pricing">Order</a></li>
-        <li><a href="#contacts">Partnership</a></li>
-        <li><a href="http://builtwithbootstrap.com/" target="_blank">Sign In</a></li>
-        <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">Sign Up</a></li>
+        <li><a>Order</a></li>
+        <li><a>Partnership</a></li>
+        <li><a ng-click="$event.preventDefault(); $ctrl.openLoginModal();">Sign In</a></li>
+        <li><a ng-click="$event.preventDefault(); $ctrl.openRegisterModal();">Sign Up</a></li>
       </ul>
     </div>
   </div>
