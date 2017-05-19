@@ -8,9 +8,7 @@
   /** @ngInject **/
   function LoginService(restConfig, $resource, $log) {
     return $resource(restConfig.loginUrl, null, {
-      post: {
-        method: 'POST'
-      }
+      'login': { method: 'POST', params: {} }
     });
   }
 })();

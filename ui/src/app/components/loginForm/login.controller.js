@@ -10,9 +10,9 @@
     var vm = this;
 
     vm.submit = function () {
-      LoginService.post({}, function (result) {
+      LoginService.login({}).$promise.then(function (result) {
         $log.log(result);
-      });
+      })
     };
 
     vm.cancel = function () {
