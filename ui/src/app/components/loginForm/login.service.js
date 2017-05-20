@@ -6,8 +6,8 @@
     .factory('LoginService', LoginService);
 
   /** @ngInject **/
-  function LoginService(restConfig, $resource, $log) {
-    return $resource(restConfig.loginUrl, null, {
+  function LoginService(restApi, $resource, $log) {
+    return $resource(restApi.login, null, {
       'login': { method: 'POST', params: {} }
     });
   }
