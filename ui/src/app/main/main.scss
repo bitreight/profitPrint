@@ -3,11 +3,11 @@ $background-dark: #2c3e50;
 $font-color: #2c3e50;
 
 header {
+
   width: 100%;
   min-height: 100%;
-  background: url(../assets/images/main_first.jpg);
+  background: url(../assets/images/main_first1.jpg) no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
 
   //position: relative;
   //-webkit-background-size: cover;
@@ -27,28 +27,29 @@ header {
 
     h1 {
       font-weight: 700;
-      font-size: 50px;
+      font-size: 2.5em;
       color: white;
-      margin-bottom: 100px;
+      margin-bottom: 30px;
+      padding: 0 50px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 1.5em;
+      color: white;
+      margin-bottom: 30px;
       padding: 0 50px;
     }
 
     a {
       bottom: 0;
       transition: all .35s;
-      font-size: 20px;
+      font-size: 1.5em;
     }
 
     .btn {
       border-style: none;
     }
-  }
-}
-
-.row {
-
-  h2{
-    text-align: center;
   }
 }
 
@@ -97,7 +98,7 @@ header {
 
             a{
               font-weight:500;
-
+              font-size:1.2em;
               &:hover {
                 text-decoration: none;
                 color: $font-color;
@@ -113,7 +114,25 @@ header {
     }
   }
 }
+.main-content-icon {
+  font-size: 4em;
+}
 
+.row {
 
+  h2{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
 
+.line {
+  border:solid 2px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 100px;
+}
 
+.main-content-box {
+  padding: 20px;
+}
