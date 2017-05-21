@@ -24,7 +24,7 @@ $icon-font-name:          "glyphicons-halflings-regular" !default;
 // endbower
 @import "_bootswatch.scss";
 
-html, body, div[ng-view] {
+html, body, #root-container {
   height: 100%;
   margin: 0;
   padding: 0;
