@@ -1,11 +1,11 @@
 (function () {
   'use strict';
 
-  angular
+ var app = angular
     .module('profitPrint')
     .component('navMain', {
       templateUrl: 'app/components/navMain/navMain.html',
-      controller: NavMainController
+      controller: (NavMainController)
     });
 
   /** @ngInject **/

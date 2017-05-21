@@ -3,9 +3,19 @@
  *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
  */
 $navbar-inverse-link-color: #5AADBB;
-$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('#{$icon-font-path}#{$icon-font-name}.eot');
+  src: url('#{$icon-font-path}#{$icon-font-name}.eot?#iefix') format('embedded-opentype'),
+  url('#{$icon-font-path}#{$icon-font-name}.woff') format('woff'),
+  url('#{$icon-font-path}#{$icon-font-name}.ttf') format('truetype'),
+  url('#{$icon-font-path}#{$icon-font-name}.svg') format('svg');
+}
 
 /**
+
  *  Do not remove the comments below. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
  */
@@ -33,3 +43,13 @@ html, body, div[ng-view] {
  */
 // injector
 // endinjector
+
+.disable-user-select{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.default-cursor{
+  cursor: default;
+}

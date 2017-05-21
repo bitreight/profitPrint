@@ -1,6 +1,26 @@
+.navbar-brand{
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.nav{
+  a {
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+}
+
 .horizontal-collapse {
   height: 1px;
 }
 .navbar-collapse.in {
   overflow-y: hidden;
+}
+
+.navbar {
+  transition: all 0.25s linear;
+}
+
+.transparent {
+  background-color: transparent;
 }

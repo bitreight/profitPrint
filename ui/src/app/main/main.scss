@@ -1,3 +1,7 @@
+$background-grey: #eaf1f1;
+$background-dark: #2c3e50;
+$font-color: #2c3e50;
+
 header {
   width: 100%;
   min-height: 100%;
@@ -37,6 +41,75 @@ header {
 
     .btn {
       border-style: none;
+    }
+  }
+}
+
+.row {
+
+  h2{
+    text-align: center;
+  }
+}
+
+.main-content {
+  background: $background-grey;
+
+  .main-container {
+    padding: 4em 0 3em;
+    color: $font-color;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+  }
+}
+
+.pros-content{
+  background: $background-dark;
+  color: white;
+}
+
+.main-footer {
+  background: $background-grey;
+  padding-top: 20px;
+  font-size: 1em;
+
+  .container {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .row {
+      display: block;
+      padding-bottom: 2em;
+
+      .menu {
+        padding-right: 15px;
+        padding-left: 15px;
+
+        ul{
+          list-style-type: none;
+          padding-left: 0;
+          li{
+            cursor: pointer;
+
+            a{
+              font-weight:500;
+
+              &:hover {
+                text-decoration: none;
+                color: $font-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .credits {
+      text-align: center;
     }
   }
 }
