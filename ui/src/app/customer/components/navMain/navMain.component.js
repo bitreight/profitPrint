@@ -4,7 +4,7 @@
  var app = angular
     .module('profitPrint')
     .component('navMain', {
-      templateUrl: 'app/components/navMain/navMain.html',
+      templateUrl: 'app/customer/components/navMain/navMain.html',
       controller: (NavMainController)
     });
 
@@ -21,7 +21,7 @@
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: 'app/components/loginForm/loginForm.html',
+        templateUrl: 'app/customer/components/loginForm/loginForm.html',
         controller: 'LoginController',
         controllerAs: '$ctrl'
       });
@@ -32,7 +32,7 @@
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: 'app/components/registerForm/registerForm.html',
+        templateUrl: 'app/customer/components/registerForm/registerForm.html',
         controller: 'RegisterController',
         controllerAs: '$ctrl'
       });
