@@ -1,0 +1,31 @@
+$login-panel-width: 350px;
+$login-panel-height: 207px;
+
+#crm-login-container {
+  padding-top: 200px;
+}
+
+#crm-login-panel {
+  margin: auto;
+  padding: 20px;
+  width: $login-panel-width;
+  height: $login-panel-height;
+  box-shadow: 0 0 3px #CCC;
+  border: 0.5px solid #d3e0ea;
+  border-radius: 0;
+
+  button {
+    width: 300px;
+    margin-left: 3px;
+    font-weight: bolder;
+    font-size: 1.1em;
+  }
+
+  input {
+    border-radius: 0;
+
+    &::-webkit-input-placeholder {
+      color: dimgrey;
+    }
+  }
+}

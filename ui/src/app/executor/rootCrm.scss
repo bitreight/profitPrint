@@ -1,0 +1,8 @@
+#root-crm-container {
+  height: 100%;
+}
+
+#crm-login-container, #crm-register-container {
+  height: calc(100% - 60px);
+  background-color: #fafafa;
+}
