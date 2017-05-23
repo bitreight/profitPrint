@@ -1,8 +1,18 @@
 $login-panel-width: 350px;
 $login-panel-height: 207px;
+$login-logo-width: 150px;
+$login-logo-height: 150px;
 
-#crm-login-container {
-  padding-top: 200px;
+.login-logo {
+  margin: 0 auto 50px auto;
+  width: $login-logo-width;
+  height: $login-logo-height;
+
+  img {
+    width: $login-logo-width;
+    height: $login-logo-height;
+    border-radius: 4px;
+  }
 }
 
 #crm-login-panel {
@@ -11,7 +21,7 @@ $login-panel-height: 207px;
   width: $login-panel-width;
   height: $login-panel-height;
   box-shadow: 0 0 3px #CCC;
-  border: 0.5px solid #d3e0ea;
+  border: 0.5px solid #dae5e8;
   border-radius: 0;
 
   button {
@@ -27,5 +37,11 @@ $login-panel-height: 207px;
     &::-webkit-input-placeholder {
       color: dimgrey;
     }
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
   }
 }

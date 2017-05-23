@@ -1,7 +1,13 @@
 #executor-navbar {
+  margin: 0;
+
   &.navbar {
     border-radius: 0;
   }
 
-  margin: 0;
+  li {
+    a {
+      font-size: 1.1em;
+    }
+  }
 }
