@@ -34,5 +34,12 @@ public class ExecutorServiceItemRest {
         return executorServiceItemService.getAllExecutorServiceItems(executorId);
     }
 
-    //TODO: update, delete endpoints
+    public ExecutorServiceItem updateExecutorServiceItemId(@PathVariable("executorId") Long executorId,
+                                                           @RequestBody ExecutorServiceItem serviceItem) {
+        return null;
+    }
+
+    public ExecutorServiceItem deleteExecutorServiceItemId(Long executorId) {
+        return null;
+    }
 }

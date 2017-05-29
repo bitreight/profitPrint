@@ -63,6 +63,16 @@ public class ExecutorServiceItemServiceImpl implements ExecutorServiceItemServic
         return executorServiceItemMapper.toExecutorServiceItems(serviceItemEntities);
     }
 
+    @Override
+    public ExecutorServiceItem updateExecutorServiceItemById(Long executorId, ExecutorServiceItem serviceItem) {
+        return null;
+    }
+
+    @Override
+    public ExecutorServiceItem deleteExecutorServiceItemById(Long executorId) {
+        return null;
+    }
+
     private ExecutorEntity getExecutorOrThrow(Long executorId) {
         ExecutorEntity executor = executorRepository.findOne(executorId);
         if (executor == null) {
