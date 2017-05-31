@@ -1,4 +1,27 @@
-<navbar-executor></navbar-executor>
 <section id="crm-register-container">
-
+  <div class="auth-logo">
+    <img src="assets/images/logo_big.png" alt="Profit Print">
+  </div>
+  <div class="well auth-panel" id="crm-register-panel">
+    <form name="registerForm" action="$ctrl.register();" novalidate>
+      <fieldset>
+        <div class="form-group" ng-class="{'has-error' : registerForm.loginInput.$dirty && registerForm.loginInput.$invalid}">
+          <input name="loginInput" type="text" class="form-control" placeholder="Имя пользователя"
+                 ng-model="$ctrl.login" ng-required="true" min="4" max="20">
+        </div>
+        <div class="form-group" ng-class="{'has-error' : registerForm.passwordInput.$dirty && registerForm.passwordInput.$invalid}">
+          <input name="passwordInput" type="password" class="form-control" placeholder="Пароль"
+                 ng-model="$ctrl.password" ng-required="true" min="6" max="20">
+        </div>
+        <div class="form-group" ng-class="{'has-error' : registerForm.passwordConfirm.$dirty && ($ctrl.passwordConfirm !== $ctrl.password)}">
+          <input name="passwordConfirm" type="password" class="form-control" placeholder="Подтвердите пароль"
+                 ng-model="$ctrl.passwordConfirm" ng-required="true">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" ng-disabled="registerForm.$invalid">Войти</button>
+        </div>
+      </fieldset>
+    </form>
+    <span><a ui-sref="executorLogin">У меня уже есть аккаунт</a></span>
+  </div>
 </section>
