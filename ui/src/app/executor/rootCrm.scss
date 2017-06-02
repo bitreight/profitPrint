@@ -1,10 +1,6 @@
 #root-crm-container {
-  height: 100%;
+  height: calc(100% - 60px); //subtract navbar height
 }
-
-//#crm-login-container {
-//  padding-top: 45px;
-//}
 
 #crm-login-container, #crm-register-container {
   padding-top: 45px;
