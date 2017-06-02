@@ -6,30 +6,48 @@
     .config(routeConfig);
 
   function routeConfig($stateProvider, $urlRouterProvider) {
+    var customerPrefix = 'app/customer/';
+    var executorPrefix = 'app/executor/';
+
     $stateProvider
       //customer routes
-      .state('customerMain', {
+      .state('customer', {
         url: '/',
-        templateUrl: 'app/customer/main/main.html',
+        templateUrl: customerPrefix + 'main/main.html',
         controller: 'MainController',
         controllerAs: 'mainCtrl'
       })
 
       //executor routes
-      .state('executorMain', {
+      .state('executor', {
         url: '/crm',
-        templateUrl: 'app/executor/rootCrm.html',
-        abstract: true
+        templateUrl: executorPrefix + 'rootCrm.html',
+        redirectTo: 'executorOrders'
       })
       .state('executorLogin', {
-        parent: 'executorMain',
+        parent: 'executor',
         url: '/login',
-        templateUrl: 'app/executor/login/loginPage.html'
+        templateUrl: executorPrefix + 'login/loginPage.html'
       })
       .state('executorRegister', {
-        parent: 'executorMain',
+        parent: 'executor',
         url: '/register',
-        templateUrl: 'app/executor/register/registerPage.html'
+        templateUrl: executorPrefix + 'register/registerPage.html'
+      })
+      .state('executorMenu', {
+        parent: 'executor',
+        abstract: true,
+        templateUrl: executorPrefix + 'dashboard/dashboard.html'
+      })
+      .state('executorOrders', {
+        parent: 'executorMenu',
+        url: '/order',
+        templateUrl: executorPrefix + 'order/orders.html'
+      })
+      .state('executorEditOrder', {
+        parent: 'executorMenu',
+        url: '/order/:id',
+        templateUrl: executorPrefix + 'order/edit/editOrder.html'
       });
 
     $urlRouterProvider.otherwise('/');

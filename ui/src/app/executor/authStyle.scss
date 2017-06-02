@@ -1,25 +1,25 @@
-$login-panel-width: 350px;
+$auth-panel-width: 350px;
 $login-panel-height: 207px;
-$login-logo-width: 150px;
-$login-logo-height: 150px;
+$register-panel-height: 267px;
+$auth-logo-width: 150px;
+$auth-logo-height: 150px;
 
-.login-logo {
+.auth-logo {
   margin: 0 auto 50px auto;
-  width: $login-logo-width;
-  height: $login-logo-height;
+  width: $auth-logo-width;
+  height: $auth-logo-height;
 
   img {
-    width: $login-logo-width;
-    height: $login-logo-height;
+    width: $auth-logo-width;
+    height: $auth-logo-width;
     border-radius: 4px;
   }
 }
 
-#crm-login-panel {
+.auth-panel {
   margin: auto;
   padding: 20px;
-  width: $login-panel-width;
-  height: $login-panel-height;
+  width: $auth-panel-width;
   box-shadow: 0 0 3px #CCC;
   border: 0.5px solid #dae5e8;
   border-radius: 0;
@@ -44,4 +44,12 @@ $login-logo-height: 150px;
     text-align: center;
     margin-top: 15px;
   }
+}
+
+#crm-login-panel {
+  height: $login-panel-height;
+}
+
+#crm-register-panel {
+  height: $register-panel-height;
 }
