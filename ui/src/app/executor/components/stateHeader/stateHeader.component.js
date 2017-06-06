@@ -11,7 +11,15 @@
   /** @ngInject **/
   function StateHeaderController($state) {
     var vm = this;
-    vm.current = $state.current.name;
+    var stateName = $state.current.name;
+
+    switch (stateName) {
+      case 'executorProfile':
+        vm.current = 'Мой профиль';
+        break;
+      default:
+        vm.current = 'Current state';
+    }
   }
 
 })();

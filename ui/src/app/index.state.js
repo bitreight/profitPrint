@@ -42,6 +42,8 @@
       .state('executorProfile', {
         parent: 'executorMenu',
         url: '/profile',
+        controller: 'ExecutorProfileController',
+        controllerAs: 'ExProfileCtrl',
         templateUrl: executorPrefix + 'profile/profile.html'
       })
       .state('executorOrders', {

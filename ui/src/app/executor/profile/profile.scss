@@ -1,32 +1,49 @@
 #crm-profile-container {
   padding: 0;
+  height: calc(100% - 70px);
+  overflow: auto;
 
   > div {
     padding: 0;
   }
-  height: calc(100% - 80px);
-  overflow: auto;
-}
-
-#executor-picture,
-#executor-coordinates,
-#executor-personal {
-  background-color: white;
-  padding: 15px;
 }
 
 #executor-picture {
-  margin-right: 15px;
-  margin-bottom: 15px;
-  height: 250px;
+  height: 264px;
 }
 
 #executor-coordinates {
-  margin-right: 15px;
-  height: 238px;
+  height: 300px;
 }
 
 #executor-personal {
-  height: 500px;
-}
+  min-height: 565px;
 
+  legend {
+    text-align: center;
+  }
+
+  #worktime-label {
+    padding-top: 35px;
+  }
+
+  .uib-timepicker {
+    a {
+      padding: 0;
+    }
+
+    input {
+      width: 60px;
+    }
+    .hours {
+      input {
+        margin-right: 5px;
+      }
+    }
+    .minutes {
+      input {
+        margin-left: 5px;
+      }
+    }
+  }
+}
