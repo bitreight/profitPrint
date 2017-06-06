@@ -39,6 +39,11 @@
         abstract: true,
         templateUrl: executorPrefix + 'dashboard/dashboard.html'
       })
+      .state('executorProfile', {
+        parent: 'executorMenu',
+        url: '/profile',
+        templateUrl: executorPrefix + 'profile/profile.html'
+      })
       .state('executorOrders', {
         parent: 'executorMenu',
         url: '/order',
