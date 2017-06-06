@@ -1,0 +1,27 @@
+#orders-container {
+  background-color: white;
+  padding: 15px 20px;
+
+  table {
+    margin-bottom: 0;
+  }
+
+  td {
+    //border-bottom: 0.5px solid #E7EAEC;
+    border-top: 0.5px solid #E7EAEC;
+  }
+}
+
+#order-statistics-container {
+  .panel {
+    border-radius: 0;
+
+    .panel-heading {
+      border-radius: 0;
+    }
+
+    &.panel-success {
+      background-color: #51c6ea;
+    }
+  }
+}
