@@ -2,12 +2,19 @@
   position: absolute;
   width: 200px;
   height: inherit;
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid #CFDBE2;
 }
 
 #crm-content {
   height: 100%;
   margin-left: 200px;
   background-color: #F3F3F4;
-  padding: 20px;
+  //padding: 20px;
+
+  .info-panel {
+    background-color: white;
+    border: 1px solid #CFDBE2;
+    border-top-width: 3px;
+    border-radius: 2px;
+  }
 }

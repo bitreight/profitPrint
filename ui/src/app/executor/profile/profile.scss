@@ -1,0 +1,32 @@
+#crm-profile-container {
+  padding: 0;
+
+  > div {
+    padding: 0;
+  }
+  height: calc(100% - 80px);
+  overflow: auto;
+}
+
+#executor-picture,
+#executor-coordinates,
+#executor-personal {
+  background-color: white;
+  padding: 15px;
+}
+
+#executor-picture {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  height: 250px;
+}
+
+#executor-coordinates {
+  margin-right: 15px;
+  height: 238px;
+}
+
+#executor-personal {
+  height: 500px;
+}
+
