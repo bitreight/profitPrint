@@ -10,6 +10,18 @@
 
 #executor-picture {
   height: 264px;
+
+  img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+  }
 }
 
 #executor-coordinates {
@@ -27,7 +39,15 @@
     padding-top: 35px;
   }
 
+  #opentime {
+    .uib-timepicker {
+      margin-right: 50px;
+    }
+  }
+
   .uib-timepicker {
+    float: left;
+
     a {
       padding: 0;
     }

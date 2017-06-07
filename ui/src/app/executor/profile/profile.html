@@ -2,7 +2,11 @@
 <div id="crm-profile-container" class="container-fluid">
   <div class="col-lg-4 col-md-12">
     <div id="executor-picture" class="info-panel">
-      ...
+
+      <div>
+        <img src="https://avatars1.githubusercontent.com/u/9005749?v=3&u=e9c9a74b23872b04acc95370c27c1d0c0e746063&s=400" alt="...">
+      </div>
+
     </div>
     <div id="executor-coordinates" class="info-panel">
       ...
@@ -45,9 +49,9 @@
           </div>
           <div class="form-group">
             <label id="worktime-label" class="col-lg-4 col-md-4 control-label">Время работы</label>
-            <div class="row col-lg-7 col-md-7">
-              <div class="col-lg-5 col-md-5 col-sm-4 col-xs-5" uib-timepicker ng-model="openTime" show-meridian="false"></div>
-              <div class="col-lg-5 col-md-5 col-sm-3 col-xs-5" uib-timepicker ng-model="closeTime" show-meridian="false"></div>
+            <div class="col-lg-7 col-md-7">
+              <div id="opentime" uib-timepicker ng-model="openTime" show-meridian="false"></div>
+              <div uib-timepicker ng-model="closeTime" show-meridian="false"></div>
             </div>
           </div>
           <div class="form-group">
