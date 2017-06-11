@@ -1,13 +1,26 @@
 #crm-menu {
   position: absolute;
-  width: 250px;
+  width: 220px;
   height: inherit;
   border-right: 1px solid #CFDBE2;
+  font-size: 1.1em;
+
+  .list-group-item {
+    border: none;
+    border-radius: 0;
+  }
+
+  a {
+    padding-left: 30px;
+  }
+  span {
+    margin-right: 10px;
+  }
 }
 
 #crm-content {
   height: 100%;
-  margin-left: 250px;
+  margin-left: 220px;
   background-color: #F3F3F4;
 
   .info-panel {
