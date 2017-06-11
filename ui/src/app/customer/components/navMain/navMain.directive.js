@@ -3,7 +3,7 @@
 
     angular
     .module('profitPrint')
-    .directive("scroll", scrollDirective);
+      .directive("scroll", scrollDirective)
 
       function scrollDirective ($window) {
         return function(scope) {

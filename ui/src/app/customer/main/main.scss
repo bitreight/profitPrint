@@ -45,6 +45,7 @@ header {
       bottom: 0;
       transition: all .35s;
       font-size: 1.5em;
+      border-radius: 40px;
     }
 
     .btn {
@@ -53,10 +54,10 @@ header {
   }
 }
 
-.main-content {
+.grey-container {
   background: $background-grey;
 
-  .main-container {
+  .grey-content {
     padding: 4em 0 3em;
     color: $font-color;
     margin-right: auto;
@@ -65,50 +66,23 @@ header {
   }
 }
 
-.pros-content{
+.dark-grey-content{
+  padding: 4em 0 3em;
   background: $background-dark;
   color: white;
 }
 
 .main-footer {
-  background: $background-grey;
   padding-top: 20px;
-  font-size: 1em;
 
   .container {
-    width: 70%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: -25px;
 
     .row {
       display: block;
-      padding-bottom: 2em;
-
-      .menu {
-        padding-right: 15px;
-        padding-left: 15px;
-
-        ul{
-          list-style-type: none;
-          padding-left: 0;
-          li{
-            cursor: pointer;
-
-            a{
-              font-weight:500;
-              font-size:1.2em;
-              &:hover {
-                text-decoration: none;
-                color: $font-color;
-              }
-            }
-          }
-        }
-      }
     }
-
     .credits {
       text-align: center;
     }
@@ -127,7 +101,8 @@ header {
 }
 
 .line {
-  border:solid 2px;
+  height: 0px;
+  border:solid 3px;
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: 100px;
@@ -135,4 +110,67 @@ header {
 
 .main-content-box {
   padding: 20px;
+  h3 {
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.partnership-content-icon {
+  font-size: 3em;
+}
+
+.advantages-icon {
+  font-size: 6em;
+  vertical-align: middle;
+  position: absolute;
+  left: 50%;
+  margin-left: -42.5px;
+}
+
+.advantages-list {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 50px;
+  li {
+    display: list-item;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+}
+
+.advantages-left-text {
+  padding-left: 50px;
+  width: 41%;
+  float: left;
+  text-align: right;
+  .advantages-header-text {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+
+.advantages-right-text {
+  width: 41%;
+  float: right;
+  text-align: left;
+  .advantages-header-text {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+
+.order-button {
+  margin: 30px 0 0 0;
+  a {
+    border-radius: 40px;
+    font-size: 1.5em;
+  }
 }

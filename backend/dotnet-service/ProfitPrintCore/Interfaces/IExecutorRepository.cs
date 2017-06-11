@@ -5,8 +5,8 @@ namespace ProfitPrintCore.Interfaces
 {
     public interface IExecutorRepository
     {
-        void Create(Executor user);
-        void Delete(Executor user);
+        void Create(Executor userExecutor);
+        void Delete(Executor userExecutor);
         Executor Read(long id);
         List<Executor> Read();
     }
