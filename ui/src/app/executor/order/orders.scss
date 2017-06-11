@@ -1,27 +1,73 @@
+#order-statistics-container {
+  padding: 0;
+
+  .panel {
+    border-radius: 2px;
+    margin: 15px 0 0 0;
+  }
+
+  .panel-heading {
+    border-radius: 0;
+
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+
+  .panel-body {
+    color: white;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .panel-success .panel-body {
+    background-color: #18BC9C;
+  }
+  .panel-info .panel-body {
+    background-color: #3498DB;
+  }
+  .panel-primary .panel-body {
+    background-color: #2C3E50;
+  }
+  .panel-danger .panel-body {
+    background-color: #E74C3C;
+  }
+}
+
 #orders-container {
   background-color: white;
   padding: 15px 20px;
+  min-width: 571px;
 
   table {
     margin-bottom: 0;
   }
 
   td {
-    //border-bottom: 0.5px solid #E7EAEC;
     border-top: 0.5px solid #E7EAEC;
   }
-}
 
-#order-statistics-container {
-  .panel {
-    border-radius: 0;
+  #search-col {
+    padding: 2px 0 12px 0;
+  }
 
-    .panel-heading {
-      border-radius: 0;
-    }
+  #pagination-col {
+    padding: 12px 0 0 0;
+  }
 
-    &.panel-success {
-      background-color: #51c6ea;
-    }
+  .pagination {
+    margin: 0;
+    text-align: left;
+  }
+
+  .st-sort-ascent:after {
+    content: '\25B2';
+  }
+
+  .st-sort-descent:after {
+    content: '\25BC';
   }
 }
+

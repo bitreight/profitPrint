@@ -49,7 +49,9 @@
       .state('executorOrders', {
         parent: 'executorMenu',
         url: '/order',
-        templateUrl: executorPrefix + 'order/orders.html'
+        templateUrl: executorPrefix + 'order/orders.html',
+        controller: 'ExecutorOrdersController',
+        controllerAs: 'exOrdersCtrl'
       })
       .state('executorEditOrder', {
         parent: 'executorMenu',
