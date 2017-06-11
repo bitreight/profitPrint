@@ -17,6 +17,9 @@
       case 'executorProfile':
         vm.current = 'Мой профиль';
         break;
+      case 'executorOrders':
+        vm.current = 'Мои заказы';
+        break;
       default:
         vm.current = 'Current state';
     }
