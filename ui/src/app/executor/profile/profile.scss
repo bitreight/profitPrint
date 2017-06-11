@@ -1,7 +1,5 @@
 #crm-profile-container {
   padding: 0;
-  height: calc(100% - 70px);
-  overflow: auto;
 
   > div {
     padding: 0;
@@ -53,7 +51,7 @@
     }
 
     input {
-      width: 60px;
+      width: 63px;
     }
     .hours {
       input {
