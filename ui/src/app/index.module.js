@@ -9,5 +9,6 @@
       'ui.router',
       'ui.bootstrap',
       'ngAnimate',
-      'duScroll']);
+      'duScroll',
+      'smart-table']);
 })();
