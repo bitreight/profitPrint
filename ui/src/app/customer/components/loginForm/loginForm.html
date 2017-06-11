@@ -3,25 +3,25 @@
     <div class="well bs-component">
       <form name="loginForm" class="form-horizontal" novalidate>
         <fieldset>
-          <legend>Log in</legend>
+          <legend>Вход в систему</legend>
           <div class="form-group" ng-class="{'has-error' : loginForm.loginInput.$dirty && loginForm.loginInput.$invalid}">
-            <label for="inputEmail" class="col-lg-2 control-label">Login</label>
-            <div class="col-lg-10">
-              <input name="loginInput" type="text" class="form-control" id="inputEmail" placeholder="Login" ng-model="$ctrl.login" ng-required="true">
+            <label for="inputEmail" class="col-lg-3 control-label">Логин</label>
+            <div class="col-lg-9">
+              <input name="loginInput" type="text" class="form-control" id="inputEmail" placeholder="Введите логин" ng-model="$ctrl.login" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-            <div class="col-lg-10">
-              <input name="passwordInput" type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="$ctrl.password" ng-required="true">
+            <label for="inputPassword" class="col-lg-3 control-label">Пароль</label>
+            <div class="col-lg-9">
+              <input name="passwordInput" type="password" class="form-control" id="inputPassword" placeholder="Введите пароль" ng-model="$ctrl.password" ng-required="true">
             </div>
           </div>
 
           <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-              <button type="reset" class="btn btn-default" ng-click="$ctrl.cancel();">Cancel</button>
-              <button type="submit" class="btn btn-success" ng-click="$ctrl.submit();" ng-disabled="loginForm.$invalid">Submit</button>
+            <div class="col-lg-9 col-lg-offset-3">
+              <button type="reset" class="btn btn-default" ng-click="$ctrl.cancel();">Отмена</button>
+              <button type="submit" class="btn btn-success" ng-click="$ctrl.submit();" ng-disabled="loginForm.$invalid">Войти</button>
             </div>
           </div>
         </fieldset>

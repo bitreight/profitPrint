@@ -1,7 +1,7 @@
 <nav scroll id="customer-navbar" ng-class="{'transparent' : boolChangeClass}" class="navbar navbar-default navbar-fixed-top transparent">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand disable-user-select default-cursor">Profit Print</a>
+      <a ui-sref="customer" class="navbar-brand disable-user-select default-cursor navbar-left">Profit Print</a>
       <button type="button" class="navbar-toggle"
               ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -12,11 +12,11 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right disable-user-select default-cursor">
-        <li><a>Order</a></li>
-        <li><a>Partnership</a></li>
-        <li><a>Price list</a></li>
-        <li><a ng-click="$event.preventDefault(); $ctrl.openLoginModal();">Sign In</a></li>
-        <li><a ng-click="$event.preventDefault(); $ctrl.openRegisterModal();">Sign Up</a></li>
+        <li><a>Заказ</a></li>
+        <li><a id="partnership-link" href="#partnership" du-smooth-scroll duration="750">Сотрудничество</a></li>
+        <li><a ui-sref="customerPriceList">Цены</a></li>
+        <li><a ng-click="$event.preventDefault(); $ctrl.openLoginModal();">Вход</a></li>
+        <li><a ng-click="$event.preventDefault(); $ctrl.openRegisterModal();">Регистрация</a></li>
       </ul>
     </div>
   </div>

@@ -3,60 +3,60 @@
     <div class="well bs-component">
       <form name="registerForm" class="form-horizontal" novalidate>
         <fieldset>
-          <legend>Register</legend>
+          <legend>Регистрация</legend>
           <div class="form-group" ng-class="{'has-error' : loginForm.loginInput.$dirty && loginForm.loginInput.$invalid}">
-            <label for="inputLogin" class="col-lg-2 control-label">Login</label>
-            <div class="col-lg-10">
-              <input name="inputLogin" type="text" class="form-control" id="inputLogin" placeholder="Login" ng-model="$ctrl.login" ng-required="true">
+            <label for="inputLogin" class="col-lg-3 control-label">Логин</label>
+            <div class="col-lg-9">
+              <input name="inputLogin" type="text" class="form-control" id="inputLogin" placeholder="Введите логин" ng-model="$ctrl.login" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputFirstName" class="col-lg-2 control-label">First name</label>
-            <div class="col-lg-10">
-              <input name="inputFirstName" type="text" class="form-control" id="inputFirstName" placeholder="First name" ng-required="true">
+            <label for="inputFirstName" class="col-lg-3 control-label">Имя</label>
+            <div class="col-lg-9">
+              <input name="inputFirstName" type="text" class="form-control" id="inputFirstName" placeholder="Введите имя" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputLastName" class="col-lg-2 control-label">Last name</label>
-            <div class="col-lg-10">
-              <input name="inputLastName" type="text" class="form-control" id="inputLastName" placeholder="Last name" ng-required="true">
+            <label for="inputLastName" class="col-lg-3 control-label">Фамилия</label>
+            <div class="col-lg-9">
+              <input name="inputLastName" type="text" class="form-control" id="inputLastName" placeholder="Введите фамилию" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-            <div class="col-lg-10">
-              <input name="inputEmail" type="text" class="form-control" id="inputEmail" placeholder="Email" ng-required="true">
+            <label for="inputEmail" class="col-lg-3 control-label">Email</label>
+            <div class="col-lg-9">
+              <input name="inputEmail" type="text" class="form-control" id="inputEmail" placeholder="Введите email" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputPhone" class="col-lg-2 control-label">Phone</label>
-            <div class="col-lg-10">
-              <input name="inputPhone" type="text" class="form-control" id="inputPhone" placeholder="Phone" ng-required="true">
+            <label for="inputPhone" class="col-lg-3 control-label">Моб. телефон</label>
+            <div class="col-lg-9">
+              <input name="inputPhone" type="text" class="form-control" id="inputPhone" placeholder="Введите моб.телефон" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-            <div class="col-lg-10">
-              <input name="passwordInput" type="password" class="form-control" id="inputPassword" placeholder="Password" ng-required="true">
+            <label for="inputPassword" class="col-lg-3 control-label">Пароль</label>
+            <div class="col-lg-9">
+              <input name="passwordInput" type="password" class="form-control" id="inputPassword" placeholder="Введите пароль" ng-required="true">
             </div>
           </div>
 
           <div class="form-group" ng-class="{'has-error' : loginForm.passwordInput.$dirty && loginForm.passwordInput.$invalid}">
-            <label for="inputConfirmPassword" class="col-lg-2 control-label">Confirm password</label>
-            <div class="col-lg-10">
-              <input name="inputConfirmPassword" type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm password" ng-required="true">
+            <label for="inputConfirmPassword" class="col-lg-3 control-label">Подтверждение пароля</label>
+            <div class="col-lg-9">
+              <input name="inputConfirmPassword" type="password" class="form-control" id="inputConfirmPassword" placeholder="Подтвердите пароль" ng-required="true">
             </div>
           </div>
 
           <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-              <button type="reset" class="btn btn-default" ng-click="$ctrl.cancel();">Cancel</button>
-              <button type="submit" class="btn btn-success" ng-click="$ctrl.submit();" ng-disabled="loginForm.$invalid">Submit</button>
+            <div class="col-lg-9 col-lg-offset-3">
+              <button type="reset" class="btn btn-default" ng-click="$ctrl.cancel();">Отмена</button>
+              <button type="submit" class="btn btn-success" ng-click="$ctrl.submit();" ng-disabled="loginForm.$invalid">Зарегистрироваться</button>
             </div>
           </div>
         </fieldset>

@@ -16,17 +16,6 @@ namespace ProfitPrintCore.Controllers
             _repository = repository;
         }
 
-        //public async Task GetToken(LoginModel loginModel)
-        //{
-        //     var client = new HttpClient();
-        //    client.DefaultRequestHeaders.Accept.Clear();
-        //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer <token>");
-        //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //    var response = await client.PostAsync("http://localhost:9092/auth/login", new StringContent(JsonConvert.SerializeObject(loginModel), Encoding.UTF8, "application/json"));
-        //    var token = new JsonObject(await response.Content.ReadAsStringAsync());
-        //    response.EnsureSuccessStatusCode();
-        //}
-
         [HttpPost]
         public IActionResult Post([FromBody]RegisterModel registerModel)
         {
@@ -49,11 +38,5 @@ namespace ProfitPrintCore.Controllers
                 return BadRequest(exception.Message);
             }
         }
-
-        //DELETE api/values/5
-        //[HttpDelete("{id}")]
-        //public void Delete(long id)
-        //{
-        //}
     }
 }
