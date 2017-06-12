@@ -1,18 +1,33 @@
+$executor-picture-block-height: 195px;
+$executor-image-size: 100px;
+$gmap-wrapper-height: 275px;
+$executor-personal-block-min-height: 565px;
+$timepicker-input-width: 63px;
+
 #crm-profile-container {
   padding: 0;
 
   > div {
     padding: 0;
   }
+
+  input, textarea, button {
+    border-radius: 0;
+  }
 }
 
 #executor-picture {
-  height: 264px;
+  height: $executor-picture-block-height;
+
+  div {
+    height: 100%;
+    position: relative;
+  }
 
   img {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: $executor-image-size;
+    height: $executor-image-size;
     border-radius: 50%;
     padding: 2px;
     margin-left: auto;
@@ -20,14 +35,45 @@
     border: 1px solid lightgrey;
     background-color: lightgrey;
   }
+
+  button {
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: calc(50% - 50px);
+    bottom: 0;
+  }
 }
 
-#executor-coordinates {
-  height: 300px;
+#executor-address {
+  #gmap-wrapper {
+    height: $gmap-wrapper-height;
+    margin-bottom: 15px;
+  }
+
+  ng-map {
+    position: absolute;
+    width: calc(100% - 62px);
+    height: $gmap-wrapper-height;
+  }
+
+  #address-list {
+    margin-top: 15px;
+    height: calc(100% - #{$gmap-wrapper-height} - 75px);
+    overflow: auto;
+
+    .list-group-item {
+      border-radius: 0;
+    }
+    ul {
+      margin: 0;
+      border-radius: 0;
+    }
+  }
 }
 
 #executor-personal {
-  min-height: 565px;
+  min-height: $executor-personal-block-min-height;
 
   legend {
     text-align: center;
@@ -51,7 +97,7 @@
     }
 
     input {
-      width: 63px;
+      width: $timepicker-input-width;
     }
     .hours {
       input {
@@ -63,5 +109,10 @@
         margin-left: 5px;
       }
     }
+  }
+
+  .last-group {
+    margin-bottom: 0;
+    margin-top: 30px;
   }
 }
