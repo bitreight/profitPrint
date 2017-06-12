@@ -10,5 +10,6 @@
       'ui.bootstrap',
       'ngAnimate',
       'duScroll',
-      'smart-table']);
+      'smart-table',
+      'ngMap']);
 })();
