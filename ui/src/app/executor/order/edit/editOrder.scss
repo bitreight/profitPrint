@@ -1,0 +1,32 @@
+#order-details-container {
+  padding: 0;
+
+  > div {
+      padding: 0;
+  }
+
+  h4 {
+    margin: 0;
+  }
+  hr {
+    margin: 10px 0;
+    border-top: 1px solid #CFDBE2;
+  }
+
+  .order-details-list {
+    padding: 0;
+
+    > div {
+      margin-bottom: 10px;
+      padding: 0;
+    }
+  }
+
+  #order-operations {
+    margin-top: 10px;
+
+    > button {
+      margin-right: 5px;
+    }
+  }
+}
