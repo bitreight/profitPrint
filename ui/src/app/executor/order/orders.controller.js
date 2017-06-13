@@ -11,7 +11,7 @@
 
     vm.orders = [
       {
-        id: '0001',
+        id: 1,
         date: new Date(),
         count: 5,
         customer: 'Вася Пупкин',
@@ -19,7 +19,7 @@
         state: 'NEW'
       },
       {
-        id: '0002',
+        id: 3,
         date: new Date(),
         count: 3,
         customer: 'Иван Иванов',
@@ -27,7 +27,7 @@
         state: 'NEW'
       },
       {
-        id: '0025',
+        id: 25,
         date: new Date(),
         count: 1,
         customer: 'Петр Петров',
@@ -35,7 +35,7 @@
         state: 'REJECTED'
       },
       {
-        id: '0015',
+        id: 15,
         date: new Date(),
         count: 2,
         customer: 'Алексей Курчевский',
@@ -43,7 +43,7 @@
         state: 'ACCEPTED'
       },
       {
-        id: '0026',
+        id: 26,
         date: new Date(),
         count: 4,
         customer: 'Александр Васильев',
