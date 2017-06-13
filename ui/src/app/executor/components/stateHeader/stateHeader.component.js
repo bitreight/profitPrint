@@ -15,10 +15,13 @@
 
     switch (stateName) {
       case 'executorProfile':
-        vm.current = 'Мой профиль';
+        vm.current = 'Профиль';
         break;
       case 'executorOrders':
-        vm.current = 'Мои заказы';
+        vm.current = 'Список заказов';
+        break;
+      case 'executorEditOrder':
+        vm.current = 'Заказ №' + $state.params.id;
         break;
       default:
         vm.current = 'Current state';
