@@ -23,7 +23,7 @@
         url: '/price',
         templateUrl: customerPrefix + 'price/priceList.html'
       })
-      .state('customerOrderForm', {
+      .state('customerNewOrderForm', {
         controller: 'CustomerOrderFormController',
         controllerAs: 'customerOrderFormCtrl',
         url: '/order/',
