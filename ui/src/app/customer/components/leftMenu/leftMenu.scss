@@ -1,0 +1,39 @@
+.customer-order-menu {
+  position: absolute;
+  background: $background-dashboard-menu;
+  color: $dashboard-font;
+  min-width: 200px;
+  width: 15%;
+}
+
+.customer-menu {
+  .list-group-item {
+    border:none;
+    border-radius: 0;
+    background: $background-dashboard-menu;
+    color: white;
+  }
+  .customer-list-group{
+    a {
+      padding-left: 30px;
+    }
+    span {
+      margin-right: 10px;
+    }
+
+    .profile-group-item{
+      height: 275px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      .profile-logo{
+        margin-top: 25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        float: left;
+        text-align: right;
+      }
+    }
+  }
+}

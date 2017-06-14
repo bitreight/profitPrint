@@ -11,7 +11,7 @@
 
     $stateProvider
       //customer routes
-        .state('customer', {
+      .state('customer', {
         url: '/',
         templateUrl: customerPrefix + 'main/main.html',
         controller: 'MainController',
@@ -21,9 +21,14 @@
         controller: 'PriceListController',
         controllerAs: 'priceListCtrl',
         url: '/price',
-        templateUrl: customerPrefix + 'priceList/priceList.html'
+        templateUrl: customerPrefix + 'price/priceList.html'
       })
-
+      .state('customerOrderForm', {
+        controller: 'CustomerOrderFormController',
+        controllerAs: 'customerOrderFormCtrl',
+        url: '/order',
+        templateUrl: customerPrefix + 'order/orderForm.html'
+      })
       //executor routes
       .state('executor', {
         url: '/crm',
@@ -69,7 +74,6 @@
         url: '/service',
         templateUrl: executorPrefix + 'service/services.html'
       });
-
 
     $urlRouterProvider.otherwise('/');
   }

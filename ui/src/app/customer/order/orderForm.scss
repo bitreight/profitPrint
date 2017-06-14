@@ -1,0 +1,29 @@
+$background-dashboard: #2d3e4f;
+$background-dashboard-panel: #34475a;
+$background-dashboard-menu: #283746;
+$background-dashboard-border: #2d3e4e;
+$dashboard-font: #dcdedf;
+
+.order-menu {
+  margin-left: 15%;
+  position: absolute;
+  background: $background-dashboard;
+  padding: 0;
+  max-height: calc(100% - 200px);
+  .header{
+    width: 100%;
+    background-color: $background-dashboard-panel;
+    color: $dashboard-font;
+  }
+}
+
+@media screen and (max-width: 1390px)
+{
+  .order-menu {
+    margin-left: 200px;
+  }
+}
+
+.google-map {
+  height: 200px;
+}

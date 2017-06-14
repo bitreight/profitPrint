@@ -1,14 +1,12 @@
-<state-header></state-header>
-<div class="container-fluid order-container">
+<left-menu></left-menu>
+
+<section class="container-fluid order-menu">
+  <div class="col-lg-12 header">
+    Новый заказ
+  </div>
   <div class="col-lg-4 col-md-12">
-    <div id="executor-picture" class="info-panel">
-      <div>
-        <img src="https://avatars1.githubusercontent.com/u/9005749?v=3&u=e9c9a74b23872b04acc95370c27c1d0c0e746063&s=400" alt="...">
-        <button class="btn btn-primary">Изменить</button>
-      </div>
-    </div>
-    <div id="executor-address" class="info-panel">
-      <div>
+    <div class="info-panel">
+      <div class="google-map">
         <ng-map default-style="false" center="[53.917873, 27.589170]">
           <marker position="[53.917873, 27.589170]" on-click=""></marker>
         </ng-map>
@@ -22,7 +20,7 @@
     </div>
   </div>
   <div class="col-lg-8 col-md-12">
-    <div class="container-fluid">
+    <div id="executor-personal" class="container-fluid info-panel">
       <form class="form-horizontal" novalidate>
         <fieldset>
           <legend class="col-lg-12 col-md-12">Общая информация</legend>
@@ -72,4 +70,4 @@
       </form>
     </div>
   </div>
-</div>
+</section>
