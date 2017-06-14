@@ -2,18 +2,37 @@
   position: absolute;
   background: $background-dashboard-menu;
   color: $dashboard-font;
-  min-width: 200px;
-  width: 15%;
+  min-width: 300px;
+  height: 100%;
 }
 
 .customer-menu {
+  background: $background-dashboard-menu;
+  color: white;
+  height: 100%;
+  color: $dashboard-font;
+  .side-bar-header{
+    cursor: pointer;
+    color: $dashboard-font;
+    &:hover {
+      color: $brand-success;
+    }
+  }
+  .category {
+    padding: 10px 15px;
+  }
   .list-group-item {
     border:none;
     border-radius: 0;
     background: $background-dashboard-menu;
-    color: white;
+    color: $dashboard-font;
+    &:hover {
+      color: $brand-success;
+      background-color: $background-dashboard-menu;
+    }
   }
   .customer-list-group{
+    margin: 0;
     a {
       padding-left: 30px;
     }
@@ -22,12 +41,17 @@
     }
 
     .profile-group-item{
-      height: 275px;
+      border-top: 1px solid $background-dashboard-border;
+      min-width: 300px;
+      height: 75px;
       position: fixed;
       bottom: 0;
       left: 0;
+      h4{
+        margin-top: 20px;
+      }
       .profile-logo{
-        margin-top: 25px;
+        margin-top: 5px;
         height: 50px;
         width: 50px;
         border-radius: 50%;
