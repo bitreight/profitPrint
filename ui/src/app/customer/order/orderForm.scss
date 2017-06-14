@@ -12,14 +12,10 @@ $dashboard-font: #dcdedf;
   padding: 0;
   max-width: calc(100% - 300px);
   width: calc(100% - 300px);
-  .header{
-    width: 100%;
-    background-color: $background-dashboard-panel;
-    h2{
-      color: $dashboard-font;
-      margin: 30px;
-    }
-  }
+}
+
+.date-picker-label{
+  padding-top: 0;
 }
 
 .map-input {
