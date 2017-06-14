@@ -26,11 +26,11 @@
       .state('customerOrderForm', {
         controller: 'CustomerOrderFormController',
         controllerAs: 'customerOrderFormCtrl',
-        url: '/order',
+        url: '/order/',
         templateUrl: customerPrefix + 'order/orderForm.html'
       })
       .state('customerOrders', {
-        url: '/orders',
+        url: '/order',
         templateUrl: customerPrefix + 'order/list/orderList.html'
       })
 
