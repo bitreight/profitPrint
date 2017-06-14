@@ -17,6 +17,12 @@
         controller: 'MainController',
         controllerAs: 'mainCtrl'
       })
+      .state('customerPriceList', {
+        controller: 'PriceListController',
+        controllerAs: 'priceListCtrl',
+        url: '/price',
+        templateUrl: customerPrefix + 'priceList/priceList.html'
+      })
 
       //executor routes
       .state('executor', {
@@ -58,12 +64,12 @@
         url: '/order/:id',
         templateUrl: executorPrefix + 'order/edit/editOrder.html'
       })
-     .state('customerPriceList', {
-        controller: 'PriceListController',
-        controllerAs: 'priceListCtrl',
-        url: '/price',
-        templateUrl: customerPrefix + 'priceList/priceList.html'
+      .state('executorServices', {
+        parent: 'executorMenu',
+        url: '/service',
+        templateUrl: executorPrefix + 'service/services.html'
       });
+
 
     $urlRouterProvider.otherwise('/');
   }
