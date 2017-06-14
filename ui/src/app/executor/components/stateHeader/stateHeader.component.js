@@ -23,6 +23,9 @@
       case 'executorEditOrder':
         vm.current = 'Заказ №' + $state.params.id;
         break;
+      case 'executorServices':
+        vm.current = 'Услуги';
+        break;
       default:
         vm.current = 'Current state';
     }
