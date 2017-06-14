@@ -5,23 +5,35 @@ $background-dashboard-border: #2d3e4e;
 $dashboard-font: #dcdedf;
 
 .order-menu {
-  margin-left: 15%;
+  height: 100%;
+  margin-left: 300px;
   position: absolute;
   background: $background-dashboard;
   padding: 0;
-  max-height: calc(100% - 200px);
+  max-width: calc(100% - 300px);
+  width: calc(100% - 300px);
   .header{
     width: 100%;
     background-color: $background-dashboard-panel;
-    color: $dashboard-font;
+    h2{
+      color: $dashboard-font;
+      margin: 30px;
+    }
   }
 }
 
-@media screen and (max-width: 1390px)
-{
-  .order-menu {
-    margin-left: 200px;
+.map-input {
+  margin-top: 120px;
+}
+
+.order-panel {
+  .order-legend{
+    color: $dashboard-font;
   }
+  background-color: $background-dashboard-panel;
+  color: $dashboard-font;
+  padding: 30px;
+  margin: 30px 0 0 30px;
 }
 
 .google-map {
