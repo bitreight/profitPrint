@@ -10,14 +10,25 @@
     var executorPrefix = 'app/executor/';
 
     $stateProvider
-      //customer routes
-        .state('customer', {
+    //customer routes
+      .state('customer', {
         url: '/',
         templateUrl: customerPrefix + 'main/main.html',
         controller: 'MainController',
         controllerAs: 'mainCtrl'
       })
-
+      .state('customerPriceList', {
+        controller: 'PriceListController',
+        controllerAs: 'priceListCtrl',
+        url: '/price',
+        templateUrl: customerPrefix + 'price/priceList.html'
+      })
+      .state('customerOrderForm', {
+        controller: 'CustomerOrderFormController',
+        controllerAs: 'customerOrderFormCtrl',
+        url: '/order',
+        templateUrl: customerPrefix + 'order/orderForm.html'
+      })
       //executor routes
       .state('executor', {
         url: '/crm',
@@ -57,12 +68,6 @@
         parent: 'executorMenu',
         url: '/order/:id',
         templateUrl: executorPrefix + 'order/edit/editOrder.html'
-      })
-     .state('customerPriceList', {
-        controller: 'PriceListController',
-        controllerAs: 'priceListCtrl',
-        url: '/price',
-        templateUrl: customerPrefix + 'priceList/priceList.html'
       });
 
     $urlRouterProvider.otherwise('/');

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
- var app = angular
+  angular
     .module('profitPrint')
     .component('navMain', {
       templateUrl: 'app/customer/components/navMain/navMain.html',
