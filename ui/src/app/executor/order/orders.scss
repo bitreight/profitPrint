@@ -49,6 +49,10 @@
     border-top: 0.5px solid #E7EAEC;
   }
 
+  td, th {
+    cursor: pointer;
+  }
+
   input {
     border-radius: 0;
   }
