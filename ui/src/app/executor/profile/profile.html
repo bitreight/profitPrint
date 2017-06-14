@@ -1,5 +1,5 @@
 <state-header></state-header>
-<div class="container-fluid order-container">
+<div id="crm-profile-container" class="container-fluid scrollable">
   <div class="col-lg-4 col-md-12">
     <div id="executor-picture" class="info-panel">
       <div>
@@ -8,7 +8,7 @@
       </div>
     </div>
     <div id="executor-address" class="info-panel">
-      <div>
+      <div id="gmap-wrapper">
         <ng-map default-style="false" center="[53.917873, 27.589170]">
           <marker position="[53.917873, 27.589170]" on-click=""></marker>
         </ng-map>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="col-lg-8 col-md-12">
-    <div class="container-fluid">
+    <div id="executor-personal" class="container-fluid info-panel">
       <form class="form-horizontal" novalidate>
         <fieldset>
           <legend class="col-lg-12 col-md-12">Общая информация</legend>
