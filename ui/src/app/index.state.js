@@ -29,6 +29,11 @@
         url: '/order',
         templateUrl: customerPrefix + 'order/orderForm.html'
       })
+      .state('customerOrders', {
+        url: '/orders',
+        templateUrl: customerPrefix + 'order/list/orderList.html'
+      })
+
       //executor routes
       .state('executor', {
         url: '/crm',
